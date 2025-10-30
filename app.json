@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "cprg303-assignment2",
-    "slug": "cprg303-assignment2",
+    "name": "MobileAppAssignment1",
+    "slug": "MobileAppAssignment1",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "cprg303assignment2",
+    "scheme": "mobileappassignment1",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
