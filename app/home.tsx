@@ -70,10 +70,30 @@ const MainPage = () => {
 
       {/* Taskbar */}
       <View style={styles.taskBar}>
-        <Link href="/home"><Text>Home</Text></Link>
-        <Text>Search</Text>
-        <Text>Videos</Text>
-        <Text>Shopping</Text>
+        <Link href="/home"><Image
+            source={{
+              uri: "https://cdn-icons-png.freepik.com/128/3917/3917033.png",
+            }}
+            style={styles.icons}
+          /></Link>
+        <Image
+            source={{
+              uri: "https://cdn-icons-png.freepik.com/128/3917/3917132.png",
+            }}
+            style={styles.icons}
+          />
+        <Image
+            source={{
+              uri: "https://cdn-icons-png.freepik.com/128/9239/9239347.png",
+            }}
+            style={styles.icons}
+          />
+        <Image
+            source={{
+              uri: "https://cdn-icons-png.freepik.com/128/10742/10742183.png",
+            }}
+            style={styles.icons}
+          />
         <Link href="./">
           <Image
             source={{
@@ -209,4 +229,8 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: "#d6249f",
   },
+  icons: {
+    width: 30,
+    height: 30,
+  }
 });
