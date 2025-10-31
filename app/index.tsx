@@ -1,15 +1,15 @@
 import { Link } from "expo-router";
 import {
-    Alert,
-    FlatList,
-    Image,
-    Platform,
-    ScrollView,
-    StatusBar,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View
+  Alert,
+  FlatList,
+  Image,
+  Platform,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View
 } from "react-native";
 
 const posts = [
@@ -94,6 +94,11 @@ const MainPage = () => {
           </View>
         </View>
 
+        {/* Settings Button */}
+        <Link href="/settings" style={styles.settingsButton}>
+          <Text style={styles.settingsButtonText}>Settings</Text>
+        </Link>
+
         {/* Follow Button */}
         <TouchableOpacity
           style={styles.alertButton}
@@ -117,10 +122,30 @@ const MainPage = () => {
 
       {/* Taskbar */}
       <View style={styles.taskBar}>
-        <Link href="/home"><Text>Home</Text></Link>
-        <Text>Search</Text>
-        <Text>Videos</Text>
-        <Text>Shopping</Text>
+        <Link href="/home"><Image
+            source={{
+              uri: "https://cdn-icons-png.freepik.com/128/3917/3917033.png",
+            }}
+            style={styles.icons}
+          /></Link>
+        <Image
+            source={{
+              uri: "https://cdn-icons-png.freepik.com/128/3917/3917132.png",
+            }}
+            style={styles.icons}
+          />
+        <Image
+            source={{
+              uri: "https://cdn-icons-png.freepik.com/128/9239/9239347.png",
+            }}
+            style={styles.icons}
+          />
+        <Image
+            source={{
+              uri: "https://cdn-icons-png.freepik.com/128/10742/10742183.png",
+            }}
+            style={styles.icons}
+          />
         <Link href="./">
           <Image
             source={{
@@ -186,6 +211,19 @@ const styles = StyleSheet.create({
   statLabel: {
     color: "#555",
   },
+  settingsButton: {
+    backgroundColor: "#ddd",
+    marginHorizontal: 20,
+    paddingVertical: 12,
+    borderRadius: 6,
+    marginBottom: 10,
+    alignItems: "center",
+    textAlign: 'center'
+  },
+  settingsButtonText: {
+    color: "#000",
+    fontWeight: "bold",
+  },
   grid: {
     alignSelf: "stretch",
   },
@@ -234,4 +272,8 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: "#d6249f",
   },
+  icons: {
+    width: 30,
+    height: 30,
+  }
 });
