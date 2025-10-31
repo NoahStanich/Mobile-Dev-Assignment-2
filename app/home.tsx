@@ -9,14 +9,63 @@ import {
   View
 } from "react-native";
 
-const posts = [
-];
-
 const MainPage = () => {
   return (
     <View style={styles.container}>
+      <Text style={styles.topText}>Instagram</Text>
+
+      {/* Stories */}
+      <View style={styles.stories}>
+          <Image
+              source={{
+                uri: "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg",
+              }}
+              style={styles.storiesImages}
+            />
+          <Image
+              source={{
+                uri: "https://images.pexels.com/photos/8185815/pexels-photo-8185815.jpeg",
+              }}
+              style={styles.storiesImages}
+            />
+          <Image
+              source={{
+                uri: "https://images.pexels.com/photos/7121557/pexels-photo-7121557.jpeg",
+              }}
+              style={styles.storiesImages}
+            />
+          <Image
+              source={{
+                uri: "https://images.pexels.com/photos/6868084/pexels-photo-6868084.jpeg",
+              }}
+              style={styles.storiesImages}
+            />
+             <Image
+              source={{
+                uri: "https://images.pexels.com/photos/6582763/pexels-photo-6582763.jpeg",
+              }}
+              style={styles.storiesImages}
+            />
+             <Image
+              source={{
+                uri: "https://images.pexels.com/photos/6151982/pexels-photo-6151982.jpeg",
+              }}
+              style={styles.storiesImages}
+            />
+      </View>
+
       <ScrollView contentContainerStyle={styles.scrollContent}>
         <View style={styles.safeAreaSpacer} />
+
+        {/* Feed */}
+        <View>
+          <Image
+              source={{
+                uri: "https://images.pexels.com/photos/6151982/pexels-photo-6151982.jpeg",
+              }}
+              style={styles.feed}
+            />
+        </View>
       </ScrollView>
 
       {/* Taskbar */}
@@ -25,7 +74,7 @@ const MainPage = () => {
         <Text>Search</Text>
         <Text>Videos</Text>
         <Text>Shopping</Text>
-        <Link href="/">
+        <Link href="./">
           <Image
             source={{
               uri: "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg",
@@ -45,11 +94,35 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
   },
+  topText: {
+    fontSize: 20,
+    fontWeight: "bold",
+    marginBottom: 20
+  },
+  stories:{
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    flexWrap: "nowrap",
+    gap: 10
+  },
+  storiesImages: {
+    width: 70,
+    height: 70,
+    borderRadius: 40,
+    borderWidth: 2,
+    borderColor: "#d6249f",
+  },
   scrollContent: {
+    paddingTop: 20,
     paddingBottom: 80, // space so content doesn't hide behind taskbar
   },
   safeAreaSpacer: {
     height: Platform.OS !== "ios" ? StatusBar.currentHeight : 0,
+  },
+  feed: {
+    flex: 1,
+    height: 500,
+    borderColor: "#d6249f"
   },
   header: {
     alignItems: "center",

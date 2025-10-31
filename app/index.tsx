@@ -1,15 +1,15 @@
 import { Link } from "expo-router";
 import {
-  Alert,
-  FlatList,
-  Image,
-  Platform,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View
+    Alert,
+    FlatList,
+    Image,
+    Platform,
+    ScrollView,
+    StatusBar,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View
 } from "react-native";
 
 const posts = [
@@ -121,7 +121,7 @@ const MainPage = () => {
         <Text>Search</Text>
         <Text>Videos</Text>
         <Text>Shopping</Text>
-        <Link href="/">
+        <Link href="./">
           <Image
             source={{
               uri: "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg",
